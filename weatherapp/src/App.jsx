@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 
+
 function App() {
+
   const [searchInput, setSearchInput] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   const [city, setCity] = useState("madurai");
   const [forecast, setForecast] = useState([]);
   const [error, setError] = useState(null);
 
-  const API_KEY = "68d1ca5a97094247ff2287e2b95f29f7";
+  const apiKey = import.meta.env.VITE_API_KEY;
+
   
   const [loading, setLoading] = useState(false);
 
